@@ -1,8 +1,8 @@
-package br.com.alex.literabyte.service;
+package br.com.alex.sitecurriculo.service;
 
-import br.com.alex.literabyte.model.dao.TextoRepository;
-import br.com.alex.literabyte.model.dto.TextoDto;
-import br.com.alex.literabyte.model.entity.Texto;
+import br.com.alex.sitecurriculo.model.dao.TextoRepository;
+import br.com.alex.sitecurriculo.model.dto.TextoDto;
+import br.com.alex.sitecurriculo.model.entity.Texto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

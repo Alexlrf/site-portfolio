@@ -1,4 +1,4 @@
-package br.com.alex.literabyte.model.entity;
+package br.com.alex.sitecurriculo.model.entity;
 
 import javax.persistence.*;
 

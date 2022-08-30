@@ -1,6 +1,6 @@
-package br.com.alex.literabyte.model.dao;
+package br.com.alex.sitecurriculo.model.dao;
 
-import br.com.alex.literabyte.model.entity.Login;
+import br.com.alex.sitecurriculo.model.entity.Login;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

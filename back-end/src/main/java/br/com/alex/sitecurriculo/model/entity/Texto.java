@@ -1,6 +1,6 @@
-package br.com.alex.literabyte.model.entity;
+package br.com.alex.sitecurriculo.model.entity;
 
-import br.com.alex.literabyte.model.dto.TextoDto;
+import br.com.alex.sitecurriculo.model.dto.TextoDto;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -19,7 +19,7 @@ public class Texto {
     private String texto;
 
     @Column(name = "data_criacao")
-    private LocalDate dataCriacao;
+    private LocalDate dataCriacao = LocalDate.now();
 
     public Texto(TextoDto textoDto) {
         this.idTexto = textoDto.getIdTexto();

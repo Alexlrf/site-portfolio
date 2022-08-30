@@ -1,7 +1,7 @@
-package br.com.alex.literabyte.controller;
+package br.com.alex.sitecurriculo.controller;
 
-import br.com.alex.literabyte.model.dto.TextoDto;
-import br.com.alex.literabyte.service.TextoService;
+import br.com.alex.sitecurriculo.model.dto.TextoDto;
+import br.com.alex.sitecurriculo.service.TextoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/literabyte/texto")
+@RequestMapping("/sitecurriculo/texto")
 public class TextoController {
 
     @Autowired

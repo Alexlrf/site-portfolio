@@ -1,4 +1,4 @@
-package br.com.alex.literabyte.service;
+package br.com.alex.sitecurriculo.service;
 
 import org.springframework.stereotype.Service;
 

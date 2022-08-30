@@ -1,8 +1,7 @@
-package br.com.alex.literabyte.model.dto;
+package br.com.alex.sitecurriculo.model.dto;
 
-import br.com.alex.literabyte.model.entity.Texto;
+import br.com.alex.sitecurriculo.model.entity.Texto;
 
-import javax.persistence.Column;
 import java.time.LocalDate;
 
 public class TextoDto {
