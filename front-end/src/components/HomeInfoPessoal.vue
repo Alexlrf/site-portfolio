@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: 'InfoPessoal',
+  name: 'HomeInfoPessoal',
 }
 </script>
 
@@ -34,6 +34,11 @@ export default {
 
   #texto_info_pessoal{
     color: #000;
+  }
+
+  #titulo_apresentacao_main{
+    text-align: center;
+    margin-top: 60px;
   }
   
 
