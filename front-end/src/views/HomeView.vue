@@ -1,16 +1,19 @@
 <template>
   <div>
-    <HomeMain />
+    <HeaderComp />
+    <HomeContainer />
   </div>
 </template>
 
 <script>
-  import HomeMain from '@/components/HomeMain.vue';
+import HeaderComp from '@/components/HeaderComp.vue';
+import HomeContainer from '@/components/HomeContainer.vue';
 
   export default {
     name: 'HomeView',
     components: {
-      HomeMain
-    },
+    HeaderComp,
+    HomeContainer
+},
   }
 </script>

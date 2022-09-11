@@ -1,35 +1,21 @@
 package br.com.alex.sitecurriculo.model.entity;
 
-import br.com.alex.sitecurriculo.model.dto.TextoDto;
-
 import javax.persistence.*;
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity(name = "tb_texto")
-public class Texto {
+public class Texto implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idTexto;
-
-    @Column(name = "categoria_texto")
+    @Column(name = "categoria_texto", nullable = false)
     private String categoriaTexto;
-
-    @Column(name = "texto")
+    @Column(name = "texto", nullable = false, columnDefinition = "text")
     private String texto;
-
-    @Column(name = "data_criacao")
+    @Column(name = "data_criacao", nullable = false)
     private LocalDate dataCriacao = LocalDate.now();
-
-    public Texto(TextoDto textoDto) {
-        this.idTexto = textoDto.getIdTexto();
-        this.categoriaTexto = textoDto.getCategoriaTexto();
-        this.texto = textoDto.getTexto();
-        this.dataCriacao = textoDto.getDataCriacao();
-    }
-
-    public Texto() {
-    }
 
     public Long getIdTexto() {
         return idTexto;

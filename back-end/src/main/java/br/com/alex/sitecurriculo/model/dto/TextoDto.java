@@ -1,5 +1,6 @@
 package br.com.alex.sitecurriculo.model.dto;
 
+import javax.validation.constraints.NotBlank;
 import br.com.alex.sitecurriculo.model.entity.Texto;
 
 import java.time.LocalDate;
@@ -7,19 +8,11 @@ import java.time.LocalDate;
 public class TextoDto {
 
     private Long idTexto;
+    @NotBlank(message = "categoria não pode ser vazia")
     private String categoriaTexto;
+    @NotBlank(message = "texto não pode ser vazia")
     private String texto;
     private LocalDate dataCriacao = LocalDate.now();
-
-    public TextoDto(Texto texto) {
-        this.idTexto = texto.getIdTexto();
-        this.categoriaTexto = texto.getCategoriaTexto();
-        this.texto = texto.getTexto();
-        this.dataCriacao = texto.getDataCriacao();
-    }
-
-    public TextoDto() {
-    }
 
     public Long getIdTexto() {
         return idTexto;
