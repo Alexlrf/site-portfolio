@@ -15,15 +15,12 @@ public class TextoService {
 
     @Autowired
     TextoRepository textoRepository;
+
     @Transactional
     public Optional<Texto> cadastrarTexto(Texto request) {
         Texto textoRetorno = textoRepository.save(request);
         return Optional.of(textoRetorno);
     }
-
-//    public Optional<Texto> buscarTexto(Long id) {
-//        return Optional.of(textoRepository.findById(id).get());
-//    }
 
     public Texto buscarTexto(Long id) {
         return textoRepository.findById(id).get();
