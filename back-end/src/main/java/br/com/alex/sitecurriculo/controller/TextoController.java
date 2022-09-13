@@ -41,12 +41,13 @@ public class TextoController {
     }
 
     @GetMapping("/todos")
-    public ResponseEntity<List<TextoDto>> buscaTextos(){
+    public ResponseEntity<List<?>> buscaTextos(){
         List<Texto> textosRetornados = textoService.buscarTextos();
         List<TextoDto> textoRetornadoDto = new ArrayList<>();
+        textosRetornados.forEach(objeto-> BeanUtils.copyProperties(objeto, textoRetornadoDto) );
         BeanUtils.copyProperties(textosRetornados, textoRetornadoDto);
         return !textosRetornados.isEmpty() ?
-                ResponseEntity.ok(textoRetornadoDto) : ResponseEntity.notFound().build();
+                ResponseEntity.ok(textosRetornados) : ResponseEntity.notFound().build();
     }
 
     @PostMapping("/cadastra")
