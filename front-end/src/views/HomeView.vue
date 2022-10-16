@@ -7,7 +7,7 @@
 
 <script>
 import HeaderComp from '@/components/HeaderComp.vue';
-import HomeContainer from '@/components/HomeContainer.vue';
+import HomeContainer from '@/components/home/HomeContainer.vue';
 
   export default {
     name: 'HomeView',
