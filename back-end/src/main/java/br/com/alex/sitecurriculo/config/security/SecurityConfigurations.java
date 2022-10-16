@@ -36,9 +36,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-
         auth.userDetailsService(autenticacaoService).passwordEncoder(new BCryptPasswordEncoder());
-
     }
 
     @Override
@@ -48,7 +46,7 @@ public class SecurityConfigurations extends WebSecurityConfigurerAdapter {
                 .antMatchers(HttpMethod.GET, "/sitecurriculo/texto/*").permitAll()
                 .antMatchers(HttpMethod.POST, "/sitecurriculo/auth").permitAll()
                 .anyRequest().authenticated()
-                .and().csrf().disable()
+                .and().cors().and().csrf().disable()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and().addFilterBefore(new AutenticacaoTokenFilter(tokenService, loginRepository), UsernamePasswordAuthenticationFilter.class);
     }

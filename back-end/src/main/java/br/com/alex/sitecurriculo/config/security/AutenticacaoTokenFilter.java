@@ -3,7 +3,6 @@ package br.com.alex.sitecurriculo.config.security;
 import br.com.alex.sitecurriculo.model.dao.LoginRepository;
 import br.com.alex.sitecurriculo.model.entity.Login;
 import br.com.alex.sitecurriculo.service.TokenService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -47,7 +46,7 @@ public class AutenticacaoTokenFilter extends OncePerRequestFilter {
 
     private String recuperarToken(HttpServletRequest request) {
         String token = request.getHeader("Authorization");
-        if (token.isEmpty() || token == null || !token.startsWith("Bearer ")){
+        if (token == null || token.isEmpty() || !token.startsWith("Bearer ")){
             return null;
         }
         return token.substring(7, token.length());
